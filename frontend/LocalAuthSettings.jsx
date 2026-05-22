@@ -34,7 +34,7 @@ export default function LocalAuthSettings({ appConfig, managerAppName, fetchConf
         return;
       }
 
-      const res = await fetch(`/api/${encodeURIComponent(managerAppName)}/config`, {
+      const res = await fetch(`/api/apps/${encodeURIComponent(managerAppName)}/config`, {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
