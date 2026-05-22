@@ -20,7 +20,7 @@ export default {
       id: 'local-auth-settings',
       label: 'Local Auth',
       slot: 'auth',
-      providerId: 'local-auth',
+      providerId: 'local',
       component: LocalAuthSettings,
       order: 0,
     },
