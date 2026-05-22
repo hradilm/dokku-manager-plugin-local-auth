@@ -105,7 +105,7 @@ function register(ctx) {
         throw new Error('Invalid credentials');
       }
       return {
-        user: { id: 'local', name: cfg.username, email: '' },
+        user: { id: 'local', name: cfg.username, email: '', isAdmin: true },
       };
     },
   });
