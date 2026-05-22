@@ -1,0 +1,5 @@
+{
+  "id": "local-auth",
+  "label": "Local Auth",
+  "contributes": ["auth"]
+}
