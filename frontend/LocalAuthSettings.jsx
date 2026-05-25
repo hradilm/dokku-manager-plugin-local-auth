@@ -106,8 +106,9 @@ export default function LocalAuthSettings({ appConfig, managerAppName, fetchConf
         ) : (
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+              <label htmlFor="local-auth-username" className="block text-sm font-medium text-gray-700 mb-1">Username</label>
               <input
+                id="local-auth-username"
                 type="text"
                 value={form.username}
                 onChange={(e) => setForm((f) => ({ ...f, username: e.target.value }))}
@@ -117,10 +118,11 @@ export default function LocalAuthSettings({ appConfig, managerAppName, fetchConf
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="local-auth-password" className="block text-sm font-medium text-gray-700 mb-1">
                 New Password
               </label>
               <input
+                id="local-auth-password"
                 type="password"
                 value={form.password}
                 onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
@@ -131,10 +133,11 @@ export default function LocalAuthSettings({ appConfig, managerAppName, fetchConf
             </div>
             {form.password && (
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="local-auth-confirm" className="block text-sm font-medium text-gray-700 mb-1">
                   Confirm New Password
                 </label>
                 <input
+                  id="local-auth-confirm"
                   type="password"
                   value={form.confirm}
                   onChange={(e) => setForm((f) => ({ ...f, confirm: e.target.value }))}
