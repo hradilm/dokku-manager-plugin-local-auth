@@ -19,9 +19,6 @@ export default {
     {
       id: 'local-auth-settings',
       label: 'Local Auth',
-      tab: 'extensions',
-      tabLabel: 'Extensions',
-      tabOrder: 99,
       slot: 'auth',
       providerId: 'local',
       component: LocalAuthSettings,
