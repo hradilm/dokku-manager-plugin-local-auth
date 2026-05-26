@@ -41,6 +41,9 @@ function mockExtensionsWithLocalAuth(page, { isConfigured = false } = {}) {
 }
 
 async function goToExtensions(page) {
+  await page.route('/api/setup/status', (route) =>
+    route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ setupComplete: true }) })
+  );
   await page.goto('/settings/extensions');
   await page.waitForSelector('[class*="animate-spin"]', { state: 'detached', timeout: 10_000 }).catch(() => {});
 }
